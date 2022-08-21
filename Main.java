@@ -43,7 +43,7 @@ class Main {
     String newOutput = "";
     //base,balljr34qso521
     for(int i = 0; i < outputToChar.length; i++){
-        if(i % 3 == 0 && i != 0) {
+        if((i+1) % 3 == 0) {
           outputToChar[i] = 'X';
         }
       newOutput = newOutput + outputToChar[i];
