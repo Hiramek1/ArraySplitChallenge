@@ -37,18 +37,18 @@ class Main {
     }
     return "not possible";
   }
-
+  
   public static String finalOutput(String output) {
-    char newOutput = output.toCharArray();
-    String[] concat = Stream.of(newOutput).map(String::valueOf).toArray(String[]::new);
-    int charCount = 0;
-    for(int i = 0; i < newOutput.length; i++){
-        if(charCount % 3 == 0) {
-          newOutput[i] = 'X';
-          charCount++;
+    char [] outputToChar = output.toCharArray();
+    String newOutput = "";
+    //base,balljr34qso521
+    for(int i = 0; i < outputToChar.length; i++){
+        if(i % 3 == 0 && i != 0) {
+          outputToChar[i] = 'X';
         }
+      newOutput = newOutput + outputToChar[i];
     }
-    return void;
+    return newOutput;
   }
 
   public static void main(String[] args) {
